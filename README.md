@@ -50,7 +50,7 @@ npm run test
 
 # Example
 
-The full request structure of each method can be found in [here](https://github.com/X-CASH-official/XCASH-api-tools-go/blob/main/XCASH-api-tools-go.go) but they generally follow the request structure of the API
+The full request structure of each method can be found in [here](https://github.com/X-CASH-official/XCASH-api-tools-js/blob/main/index.js) but they generally follow the request structure of the API
 
 The full response structure of each request can be found in [here](https://github.com/X-CASH-official/XCASH-api-tools-go/blob/main/XCASH-api-tools-go-structures.go)
 
@@ -69,7 +69,7 @@ async func main() {
     await xcash.Initialize(XCASH_DAEMON_ADDRESS,XCASH_WALLET_ADDRESS);
     
     const data = await xcash.Blockchain_get_block_count();
-	  console.log(data.Result.Count); // prints 993163
+    console.log(data.result.count); // prints 993163
     console.log(JSON.stringify(data));
     
     /* Prints out the following:
@@ -86,7 +86,7 @@ async func main() {
     
     
     const dataAPI = await xcash.API_Blockchain_stats();
-    console.log(dataAPI.Result.Count); // prints 810000
+    console.log(dataAPI.result.count); // prints 810000
     console.log(JSON.stringify(dataAPI));
     
     /* Prints out the following:
