@@ -9,6 +9,7 @@ Most methods are included
 
 
 # How to Install
+**Note you must use node.js 18+**
 
 Run this inside your project directory 
 ```shell
