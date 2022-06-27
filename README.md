@@ -61,7 +61,7 @@ const xcash = require('xcash');
 const XCASH_DAEMON_ADDRESS = "127.0.0.1:18281";
 const XCASH_WALLET_ADDRESS = "127.0.0.1:18285";
 
-async func main() {
+async function main() {
     try {
     await xcash.Initialize(XCASH_DAEMON_ADDRESS,XCASH_WALLET_ADDRESS);
     
@@ -83,7 +83,7 @@ async func main() {
     
     
     const dataAPI = await xcash.API_Blockchain_stats();
-    console.log(dataAPI.result.count); // prints 810000
+    console.log(dataAPI.height); // prints 810000
     console.log(JSON.stringify(dataAPI));
     
     /* Prints out the following:
@@ -107,7 +107,13 @@ async func main() {
   "inflationTime": 1000000000
 }
     */
+     }
+     catch (error)
+     {
+         console.log(error);
+     }
 }
 
 main();
+
 ```
