@@ -54,9 +54,6 @@ The full request structure of each method can be found in [here](https://github.
 
 The full response structure of each request can be found in [here](https://github.com/X-CASH-official/XCASH-api-tools-go/blob/main/XCASH-api-tools-go-structures.go)
 
-Global API calls will just return the structure or nil  
-All other calls return the structure or nil and an error structure or nil.  
-
 The example below calls one method from the global API, and one method from the Blockchain
 
 ```node
