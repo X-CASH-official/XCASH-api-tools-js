@@ -348,6 +348,86 @@ exports.DPOPS_delegate_update = async function(item, value)
   }
 }
 
+exports.Blockchain_get_balance = async function()
+{ 
+  try
+  {
+    const response = await fetch(`http://${XCASH_WALLET_ADDRESS}/json_rpc`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: `{"jsonrpc":"2.0","id":"0","method":"get_balance"}`
+    });
+    return await response.json();
+  }
+  catch (error)
+  {
+    return error;
+  }
+}
+
+exports.Blockchain_get_address = async function()
+{ 
+  try
+  {
+    const response = await fetch(`http://${XCASH_WALLET_ADDRESS}/json_rpc`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: `{"jsonrpc":"2.0","id":"0","method":"get_address"}`
+    });
+    return await response.json();
+  }
+  catch (error)
+  {
+    return error;
+  }
+}
+
+exports.Blockchain_get_address_index = async function(address)
+{ 
+  try
+  {
+    const response = await fetch(`http://${XCASH_WALLET_ADDRESS}/json_rpc`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: `{"jsonrpc":"2.0","id":"0","method":"get_address_index","params":{"address":"${address}"}}`
+    });
+    return await response.json();
+  }
+  catch (error)
+  {
+    return error;
+  }
+}
+
+exports.Blockchain_create_address = async function(index)
+{ 
+  try
+  {
+    const response = await fetch(`http://${XCASH_WALLET_ADDRESS}/json_rpc`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: `{"jsonrpc":"2.0","id":"0","method":"create_address","params":{"account_index":${index}}}`
+    });
+    return await response.json();
+  }
+  catch (error)
+  {
+    return error;
+  }
+}
+
 exports.Blockchain_get_height = async function()
 { 
   try
