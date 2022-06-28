@@ -110,13 +110,13 @@ async function main()
   await sleep(5);
 
   test = "API_Blockchain_tx_data";
-  data = await xcash.API_Blockchain_tx_data("d15005880f5f88b19fc88bdec29faaf57489ba85dd02d41ec87043a5eddf95a9");
+  data = await xcash.API_Blockchain_tx_data("18a5046994bec4e75d46fd17de3315592aa69d11f4b1a530717ea45a01d49312");
   results = JSON.stringify(data).includes("\"result\"") ? "PASSED" : "FAILED";
   console.log(`Testing ${test} - ${results}`);
   await sleep(5);
 
   test = "API_Blockchain_prove_tx";
-  data = await xcash.API_Blockchain_prove_tx("d15005880f5f88b19fc88bdec29faaf57489ba85dd02d41ec87043a5eddf95a9","XCA1a9usG2UKajV1Dqzp8fL1BbN3hzuaaJMYjCo7qDoC4C3Vvc5owiLAqKbVw2cRbwRqx3mgrau1Z7LkX6cxR2NC4ZmFBLe2Mf","a15005880f5f88b19fc88bdec29faaf57489ba85dd02d41ec87043a5eddf95a9")
+  data = await xcash.API_Blockchain_prove_tx("18a5046994bec4e75d46fd17de3315592aa69d11f4b1a530717ea45a01d49312","XCA1cH8Qs5hLYnzQTDuJqkJiQEZbgQsUM3BgA6vBod5T5Eindas5sikKJaLbkhM3YBW7PtoJY6BtNLkZuahksLFX5eSPDcmCLL","c10a439b706949e86146ca17c2fc41e24e4348d6b7a6d6af0623cfc5037fe20c")
   results = JSON.stringify(data).includes("\"result\"") ? "PASSED" : "FAILED";
   console.log(`Testing ${test} - ${results}`);
   await sleep(5);
@@ -128,7 +128,7 @@ async function main()
   await sleep(5);
   
   test = "API_Blockchain_tx_history";
-  data = await xcash.API_Blockchain_tx_history("sender","XCA1a9usG2UKajV1Dqzp8fL1BbN3hzuaaJMYjCo7qDoC4C3Vvc5owiLAqKbVw2cRbwRqx3mgrau1Z7LkX6cxR2NC4ZmFBLe2Mf");
+  data = await xcash.API_Blockchain_tx_history("sender","XCA1kzoR3ZLNg5zxNmxrY8FYKtgEvPZqC2xoRpm1axCpQcrrZfoKTSkSNsASDspdt3j1WcEnQJyuuB5VPSB56WWy36A4sQtQhe");
   results = JSON.stringify(data).includes("\"result\"") ? "PASSED" : "FAILED";
   console.log(`Testing ${test} - ${results}`);
   await sleep(5);
