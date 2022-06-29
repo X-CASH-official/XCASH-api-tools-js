@@ -74,7 +74,7 @@ async function main()
   await sleep(5);
 
   test = "Blockchain_get_tx";
-  data = await xcash.Blockchain_get_tx("35f9dccaf21dfe1df0945ebfc8b3ef28977b4ea1a78b3726c9f866facd27f7ad");
+  data = await xcash.Blockchain_get_tx("18a5046994bec4e75d46fd17de3315592aa69d11f4b1a530717ea45a01d49312");
   results = JSON.stringify(data).includes("\"result\"") ? "PASSED" : "FAILED";
   console.log(`Testing ${test} - ${results}`);
   await sleep(5);
