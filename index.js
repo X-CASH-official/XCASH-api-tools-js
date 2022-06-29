@@ -88,7 +88,7 @@ exports.Blockchain_get_last_block_header = async function()
   }
 }
 
-exports.Blockchain_get_block_header_by_hash = async function(height)
+exports.Blockchain_get_block_header_by_hash = async function(hash)
 { 
   try
   {
@@ -98,7 +98,7 @@ exports.Blockchain_get_block_header_by_hash = async function(height)
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       },
-      body: `{"jsonrpc":"2.0","id":"0","method":"get_block_header_by_hash","params":{"hash":"${height}"}}`
+      body: `{"jsonrpc":"2.0","id":"0","method":"get_block_header_by_hash","params":{"hash":"${hash}"}}`
     });
     return await response.json();
   }
