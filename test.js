@@ -164,7 +164,7 @@ async function main()
   await sleep(5);
   
   test = "API_DPOPS_active_delegates";
-  data = await xcash.API_DPOPS_active_delegatesFAILED
+  data = await xcash.API_DPOPS_active_delegates();
   results = JSON.stringify(data).includes("\"Error\"") ? "FAILED" : "PASSED";
   console.log(`Testing ${test} - ${results}`);
   await sleep(5);
