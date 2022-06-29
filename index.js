@@ -1241,9 +1241,7 @@ exports.API_DPOPS_registered_delegates = async function()
         'Accept': 'application/json',
       }
     });
-    let data = response.text();
-    data = "{" + data + "}";
-    return await JSON.parse(data);
+    return await response.json();
   }
   catch (error)
   {
@@ -1262,9 +1260,7 @@ exports.API_DPOPS_online_delegates = async function()
         'Accept': 'application/json',
       }
     });
-    let data = response.text();
-    data = "{" + data + "}";
-    return await JSON.parse(data);
+    return await response.json();
   }
   catch (error)
   {
@@ -1283,9 +1279,7 @@ exports.API_DPOPS_active_delegates = async function()
         'Accept': 'application/json',
       }
     });
-    let data = response.text();
-    data = "{" + data + "}";
-    return await JSON.parse(data);
+    return await response.json();
   }
   catch (error)
   {
@@ -1342,9 +1336,7 @@ exports.API_DPOPS_delegates_votes = async function(delegate, start, limit)
         'Accept': 'application/json',
       }
     });
-    let data = response.text();
-    data = "{" + data + "}";
-    return await JSON.parse(data);
+    return await response.json();
   }
   catch (error)
   {
