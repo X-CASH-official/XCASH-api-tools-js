@@ -232,7 +232,7 @@ exports.Blockchain_get_tx = async function(tx)
 { 
   try
   {
-    const response = await fetch(`http://${XCASH_DAEMON_ADDRESS}/json_rpc`, {
+    const response = await fetch(`http://${XCASH_DAEMON_ADDRESS}/get_transactions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
