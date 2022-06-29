@@ -1241,7 +1241,9 @@ exports.API_DPOPS_registered_delegates = async function()
         'Accept': 'application/json',
       }
     });
-    return await response.json();
+    let data = response.text();
+    data = "{" + data + "}";
+    return await JSON.parse(data);
   }
   catch (error)
   {
